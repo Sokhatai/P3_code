@@ -1,0 +1,37 @@
+.logo{
+    width: 40%;
+    height: auto;
+    margin: 15px 30% 15px 30%;
+}
+
+
+.card{
+    background-color: $couleur_de_fond;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+        background-color: #eaeaea;
+        width: 100%;
+        text-align: center;
+        padding: 18px;
+        font-size: 20px;
+        border-top: solid 3px #d6d6d6;
+        font-weight: bold;
+    }
+    .fa-location-dot{
+        margin-right: 20px;
+    }
+    h2{
+        padding: 40px 20% 15px 20%;
+        font-size: 30px;
+        text-align: center;
+    }
+    h3{
+        font-size: 22px;
+        padding: 0 10% 30px 10%;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    }

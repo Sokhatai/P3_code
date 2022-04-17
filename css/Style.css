@@ -1,6 +1,134 @@
+@keyframes shake {
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/*@import "./utils/extensions";*/
 * {
   box-sizing: border-box;
-  color: black;
+  margin: 0;
+  padding: 0;
 }
+
+#conteneur {
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.bouton {
+  font-size: 20px;
+  width: 300px;
+  height: 60px;
+  margin-bottom: 50px;
+  border: 0;
+  border-radius: 50px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+}
+.bouton:hover {
+  animation: shake 300ms;
+}
+
+.logo {
+  width: 40%;
+  height: auto;
+  margin: 15px 30% 15px 30%;
+}
+
+.card {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card p {
+  background-color: #eaeaea;
+  width: 100%;
+  text-align: center;
+  padding: 18px;
+  font-size: 20px;
+  border-top: solid 3px #d6d6d6;
+  font-weight: bold;
+}
+.card .fa-location-dot {
+  margin-right: 20px;
+}
+.card h2 {
+  padding: 40px 20% 15px 20%;
+  font-size: 30px;
+  text-align: center;
+}
+.card h3 {
+  font-size: 22px;
+  padding: 0 10% 30px 10%;
+  text-align: center;
+  font-weight: normal;
+}
+
+.fonctionnement h1 {
+  margin-top: 50px;
+  margin-left: calc(10% - 15px);
+}
+
+.modeemploi {
+  background-color: #f6f6f6;
+  width: 80%;
+  height: 90px;
+  border-radius: 25px;
+  margin: 25px auto;
+  box-shadow: 5px 5px 15px 3px #D6D6D6;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 90px;
+}
+.modeemploi span {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 100%;
+  padding: 6px 10px;
+  position: relative;
+  right: 15px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.restaurant {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #f6f6f6;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  height: 250px;
+  padding: 10px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer h1 {
+  margin: 10px 0;
+}
+
+/*@import "./layouts/container";
+@import "./layouts/form";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";*/
 
 /*# sourceMappingURL=style.css.map */
