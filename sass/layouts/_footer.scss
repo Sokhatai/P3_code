@@ -8,5 +8,13 @@ footer{
     justify-content: space-around;
     h1{
         margin: 10px 0;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: italic;
     }
+}
+
+.footermenu{
+    position: relative;
+    bottom: 50px;
 }

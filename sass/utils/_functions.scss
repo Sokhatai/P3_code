@@ -10,3 +10,15 @@
         transform: rotate(0);
     }
 }
+
+@keyframes apparition{
+    from{
+        opacity: 0;
+        top: 50px;
+    }
+
+    to{
+        opacity: 1;
+        top: 0px;
+    }
+}

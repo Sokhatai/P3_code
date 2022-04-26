@@ -9,6 +9,16 @@
     transform: rotate(0);
   }
 }
+@keyframes apparition {
+  from {
+    opacity: 0;
+    top: 50px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
 /*@import "./utils/extensions";*/
 * {
   box-sizing: border-box;
@@ -19,6 +29,86 @@
 #conteneur {
   max-width: 500px;
   margin: auto;
+}
+
+.fondresto {
+  max-width: 500px;
+}
+
+.menuresto {
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  bottom: 50px;
+  padding: 40px 10px;
+}
+.menuresto .entrees {
+  position: relative;
+  animation: apparition 800ms ease-in-out both;
+}
+.menuresto .plats {
+  position: relative;
+  animation: apparition 800ms ease-in-out 500ms both;
+}
+.menuresto .desserts {
+  position: relative;
+  animation: apparition 800ms ease-in-out 1s both;
+}
+.menuresto h1 {
+  font-weight: normal;
+}
+.menuresto h2 {
+  margin: 30px 0 20px;
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+  font-size: 14px;
+  padding-bottom: 5px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.menuresto .choix {
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 20px;
+  padding-left: 12px;
+  box-shadow: 5px 5px 15px 3px #D6D6D6;
+  overflow: hidden;
+}
+.menuresto .choix span {
+  position: relative;
+}
+.menuresto .choix h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  text-overflow: ellipsis;
+}
+.menuresto .choix p {
+  font-size: 13px;
+  text-overflow: ellipsis;
+}
+.menuresto .choix:hover > .animvalid {
+  left: 0px;
+  transform: rotate(-360deg);
+}
+.menuresto .bouton {
+  position: relative;
+  width: 50%;
+  left: 25%;
+  margin-top: 50px;
+}
+
+.animvalid {
+  float: right;
+  color: white;
+  font-size: 25px;
+  background-color: #99E2D0;
+  width: 50px;
+  text-align: center;
+  position: relative;
+  left: 50px;
+  height: 50px;
+  line-height: 50px;
+  transition: all 1s ease-in-out;
 }
 
 h1 {
@@ -41,6 +131,25 @@ h1 {
 }
 .bouton:hover {
   animation: shake 300ms;
+}
+
+.return {
+  text-decoration: none;
+  color: black;
+}
+.return .fa-arrow-left {
+  font-size: 25px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  text-align: center;
+}
+.return .fa-arrow-left:hover {
+  background-color: grey;
 }
 
 .logo {
@@ -166,6 +275,14 @@ footer {
 }
 footer h1 {
   margin: 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.footermenu {
+  position: relative;
+  bottom: 50px;
 }
 
 /*@import "./layouts/container";
