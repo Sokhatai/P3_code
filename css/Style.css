@@ -19,6 +19,65 @@
     top: 0px;
   }
 }
+@keyframes content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.spinner {
+  position: absolute;
+  margin: 250px auto 0;
+  width: 70px;
+  text-align: center;
+  left: 48%;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 800ms 4 ease-in-out both;
+  animation: sk-bouncedelay 800ms 4 ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+  background-color: #9356DC;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+  background-color: #FF79DA;
+}
+
+.spinner .bounce3 {
+  background-color: #99E2D0;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 /*@import "./utils/extensions";*/
 * {
   box-sizing: border-box;
@@ -29,6 +88,7 @@
 #conteneur {
   max-width: 500px;
   margin: auto;
+  animation: content 2000ms 1000ms backwards;
 }
 
 .fondresto {
@@ -44,15 +104,15 @@
 }
 .menuresto .entrees {
   position: relative;
-  animation: apparition 800ms ease-in-out both;
+  animation: apparition 800ms ease-in-out 2000ms both;
 }
 .menuresto .plats {
   position: relative;
-  animation: apparition 800ms ease-in-out 500ms both;
+  animation: apparition 800ms ease-in-out 2500ms both;
 }
 .menuresto .desserts {
   position: relative;
-  animation: apparition 800ms ease-in-out 1s both;
+  animation: apparition 800ms ease-in-out 3000ms both;
 }
 .menuresto h1 {
   font-weight: normal;
@@ -74,21 +134,46 @@
   box-shadow: 5px 5px 15px 3px #D6D6D6;
   overflow: hidden;
 }
-.menuresto .choix span {
-  position: relative;
+.menuresto .choix .animvalid {
+  float: right;
+  color: white;
+  font-size: 25px;
+  background-color: #99E2D0;
+  width: 0;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  transition: all 500ms ease-in-out;
 }
 .menuresto .choix h3 {
-  margin-bottom: 5px;
+  margin: 10px 0 5px;
   font-size: 16px;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 60px);
+  overflow: hidden;
+  transition: width 500ms ease-in-out;
 }
 .menuresto .choix p {
+  margin-bottom: 10px;
+  padding-right: 10px;
   font-size: 13px;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  transition: width 500ms ease-in-out;
 }
-.menuresto .choix:hover > .animvalid {
-  left: 0px;
-  transform: rotate(-360deg);
+.menuresto .choix span {
+  float: right;
+  font-size: 13px;
+  padding-right: 20px;
+}
+.menuresto .choix:hover .animvalid {
+  width: 60px;
+}
+.menuresto .choix:hover .fa-circle-check {
+  transform: rotate(720deg);
 }
 .menuresto .bouton {
   position: relative;
@@ -97,18 +182,8 @@
   margin-top: 50px;
 }
 
-.animvalid {
-  float: right;
-  color: white;
-  font-size: 25px;
-  background-color: #99E2D0;
-  width: 50px;
-  text-align: center;
-  position: relative;
-  left: 50px;
-  height: 50px;
-  line-height: 50px;
-  transition: all 1s ease-in-out;
+.fa-circle-check {
+  transition: all 750ms ease-in-out;
 }
 
 h1 {
