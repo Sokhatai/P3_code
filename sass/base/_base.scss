@@ -20,6 +20,10 @@
     position: relative;
     bottom: 50px;
     padding: 40px 10px;
+    .fa-heart{
+        float: right;
+        margin-right: 20px;
+    }
     .entrees{
         position: relative;
         animation: apparition 800ms ease-in-out 2000ms both;
@@ -83,7 +87,8 @@
         }
         span{
             float: right;
-            font-size: 13px;
+            font-size: 16px;
+            font-weight: bold;
             padding-right: 20px;
         }
         &:hover{
@@ -108,3 +113,4 @@
 .fa-circle-check{
     transition: all 750ms ease-in-out
 }
+
