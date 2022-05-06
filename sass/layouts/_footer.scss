@@ -1,4 +1,5 @@
 footer{
+    text-decoration: none;
     background-color: #353535;
     color: white;
     height: 250px;
@@ -6,6 +7,10 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    a{
+        text-decoration: none;
+        color: white;
+    }
     h1{
         margin: 10px 0;
         font-size: 18px;
